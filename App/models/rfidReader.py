@@ -1,10 +1,21 @@
+from models.rfidTag import RFIDTag
 
 class RFIDReader:
 
-    def __init__(self, reader_id, location):
+    def __init__(self, reader_id: int, zone_id: int):
         self.reader_id = reader_id
-        self.location = location
+        self.location = zone_id
         self.connected = False
+        self.rfid_tags = []
+
+    def add_rfid_tag(self, tag: RFIDTag):
+        self.rfid_tags.append(tag)
+
+    def remove_rfid_tag(self, tag_id: int):
+        self.rfid_tags = [tag for tag in self.rfid_tags if tag.tag_id != tag_id]
+
+    def get_rfid_tags(self) -> list:
+        return self.rfid_tags
 
     def connect(self):
         self.connected = True
@@ -13,14 +24,6 @@ class RFIDReader:
     def disconnect(self):
         self.connected = False
         print(f"RFID reader {self.reader_id} disconnected")
-
-    def read_rfid_tag(self, tag):
-        if self.connected:
-            print(f"RFID tag {tag.get_tag_id()} read by reader {self.reader_id} is at the location: {tag.get_location()}")
-            return tag
-        else:
-            print("Error: RFID reader not connected.")
-            return None
         
     def get_reader_id(self):
         return self.reader_id
@@ -30,4 +33,18 @@ class RFIDReader:
 
     def is_connected(self):
         return self.connected
+    
+    # Iterator pattern
+    def __iter__(self):
+        self.index = 0
+        return self
+
+    def __next__(self):
+        if self.index < len(self.rfid_tags):
+            tag = self.rfid_tags[self.index]
+            self.index += 1
+            return tag
+        else:
+            raise StopIteration
+        
         

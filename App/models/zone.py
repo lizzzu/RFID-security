@@ -1,40 +1,56 @@
+from models.rfidTag import RFIDTag
+from models.rfidReader import RFIDReader
+from models.employee import Observer
 
 class Zone:
 
-    def __init__(self, id, name, capacity):
+    def __init__(self, id: int, name: str):
         self.name = name
         self.id = id
-        self.capacity = capacity
-        self.itemList = []
+        self.observers = []
+        #self.capacity = capacity
+        #self.rfid_reader = RFIDReader
 
-    def add_item(self, item):
-        if len(self.itemList) < self.capacity:
-            self.itemList.append(item)
-            print(f"Item id = {item.item_id} added to Zone {self.id}")
-        else:
-            print(f"Zone {self.id} is at full capacity. Cannot add more items.")
+    def add_rfid_reader(self, reader: RFIDReader):
+        self.rfid_reader = reader
 
-    def remove_item(self, item):
-        if item in self.itemList:
-            self.itemList.remove(item)
-            print(f"Item id = {item.item_id} removed from Zone {self.id}")
-        else:
-            print(f"Item {item} not found in Zone {self.id}")
-    
-    def get_number_of_items(self):
-        return len(self.itemList)
+    def add_rfid_tag(self, tag: RFIDTag):
+        self.rfid_reader.add_rfid_tag(tag)
+        self.notify_observers(tag.tag_id, f"added in zone with id = {self.id}")
 
-    def is_full(self):
-        return len(self.itemList) == self.capacity
-    
+    def remove_rfid_tag(self, tag_id: int):
+        self.rfid_reader.remove_rfid_tag(tag_id)
+        self.notify_observers(tag_id, f"removed from zone with id = {self.id}")
+
+    def get_rfid_tags(self):
+        return self.rfid_reader.get_rfid_tags()
+
     def get_items(self):
-        return self.itemList
-
-    def get_capacity(self):
-        return self.capacity
+        return list(self.rfid_reader)
+    
+    def is_tag_in_zone(self, target_tag_id: int):
+        for tag in self.rfid_reader:
+            if tag.tag_id == target_tag_id:
+                return True
+        return False
     
     def get_zone_id(self):
         return self.id
 
     def __str__(self):
-        return f"name = {self.name}\nid = {self.id}\ncapacity = {self.capacity}"
+        return f"name = {self.name}\nid = {self.id}"
+    
+    # Iterator pattern
+    def __iter__(self):
+        return iter(self.rfid_reader)
+
+    # Observer design 
+    def add_observer(self, observer):
+        self.observers.append(observer)
+
+    def remove_observer(self, observer):
+        self.observers.remove(observer)
+
+    def notify_observers(self, tag_id, action):
+        for observer in self.observers:
+            observer.update(tag_id, action)

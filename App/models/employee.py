@@ -1,10 +1,16 @@
+from abc import ABC, abstractmethod
+# Observer interface
+class Observer(ABC):
+    @abstractmethod
+    def update(self, tag_id, action):
+        pass
 
 class Employee:
 
-    def __init__(self, employee_id, name, role):
+    def __init__(self, employee_id: int, name: str):
         self.employee_id = employee_id
         self.name = name
-        self.role = role
+        #self.role = role
 
     def get_employee_id(self):
         return self.employee_id
@@ -20,3 +26,9 @@ class Employee:
 
     def set_role(self, value):
         self.role = value
+
+    # Observer pattern
+    def update(self, tag_id, action):
+        print(f"employee id={self.employee_id}: Tag '{tag_id}' was {action}.")
+
+    

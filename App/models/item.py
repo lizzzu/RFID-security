@@ -1,14 +1,11 @@
 
 class Item:
 
-    def __init__(self, item_id, name, rfid_tag_id):
+    def __init__(self, item_id: int, name: str, rfid_tag_id: int):
         self.item_id = item_id
         self.rfid_tag_id = rfid_tag_id
-        self.zone_id = 0
+        #self.zone_id = 0
         self.name = name
-
-    def update_zone_id(self, zone_id):
-        self.zone_id = zone_id
 
     def get_item_details(self):
         details = {
@@ -22,9 +19,6 @@ class Item:
     def get_item_id(self):
         return self.item_id
     
-    def get_zone_id(self):
-        return self.zone_id
-    
     def get_name(self):
         return self.name
     
@@ -33,4 +27,4 @@ class Item:
     
     def __str__(self):
         """Return a string representation of the item."""
-        return f"Item ID: {self.item_id}, Name: {self.name}, Zone ID: {self.zone_id}, RFID Tag ID: {self.rfid_tag_id}"
+        return f"Item ID: {self.item_id}, Name: {self.name} RFID Tag ID: {self.rfid_tag_id}"
