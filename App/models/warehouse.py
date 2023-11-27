@@ -1,8 +1,9 @@
 from models.item import Item
 from models.zone import Zone
 from models.rfidTag import RFIDTag
-from models.employee import Employee
-# Singleton Pattern - exista doar o singura instanta a clasei warehouse
+from models.employee import Employee, Role
+from security import AccessControl, check_access_control
+
 class Warehouse:
 
     _instance = None
@@ -15,9 +16,11 @@ class Warehouse:
             cls._instance.zones = []
             cls._instance.employee = []
             cls._instance.capacity = capacity
+            cls.access_control = AccessControl()
         return cls._instance
-
-    def add_item(self, item: Item, tag: RFIDTag) -> bool:
+    
+    @check_access_control("add_item")
+    def add_item(self, employee: Employee, item: Item, tag: RFIDTag) -> bool:
         if len(self.items) < self.capacity:
             self.items.append(item)
             self.rfid_tags.append(tag)
@@ -25,6 +28,7 @@ class Warehouse:
         else:
             print(f"Warehouse is at full capacity. Cannot add more items.")
             return False
+
 
     def remove_item(self, item_id: int) -> bool:
         for item in self.items:

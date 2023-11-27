@@ -5,12 +5,22 @@ class Observer(ABC):
     def update(self, tag_id, action):
         pass
 
+class Role:
+    def __init__(self, permissions=[]):
+        self.permissions = permissions
+
+    def add_permission(self, permission):
+        self.permissions.append(permission)
+
+    def check_permission(self, required_permission):
+        return required_permission in self.permissions
+    
 class Employee:
 
-    def __init__(self, employee_id: int, name: str):
+    def __init__(self, employee_id: int, name: str, role: Role):
         self.employee_id = employee_id
         self.name = name
-        #self.role = role
+        self.role = role
 
     def get_employee_id(self):
         return self.employee_id
