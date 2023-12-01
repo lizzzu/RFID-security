@@ -1,0 +1,145 @@
+>>>>>> from models.item import Item
+>>>>>> from models.zone import Zone
+>>>>>> from models.rfidTag import RFIDTag
+>>>>>> from models.employee import Employee
+>>>>>> from security import AccessControl, check_access_control
+       
+>>>>>> class Warehouse:
+       
+>>>>>>     _instance = None
+       
+>>>>>>     def __new__(cls, capacity: int):
+    1:         if cls._instance is None:
+    1:             cls._instance = super().__new__(cls)
+    1:             cls._instance.items = []
+    1:             cls._instance.rfid_tags = []
+    1:             cls._instance.zones = []
+    1:             cls._instance.employee = []
+    1:             cls._instance.capacity = capacity
+    1:             cls.access_control = AccessControl()
+    1:         return cls._instance
+       
+>>>>>>     def get_capacity(self):
+>>>>>>         return self.capacity
+       
+>>>>>>     def get_zones(self):
+>>>>>>         return self.zones
+       
+>>>>>>     def get_items(self):
+>>>>>>         return self.items
+       
+>>>>>>     def get_rfid_tags(self):
+>>>>>>         return self.rfid_tags
+       
+>>>>>>     def get_tags_id_from_zone(self, zone_id: int):
+    2:         try:
+    9:             for zone in self.zones:
+    9:                 if zone.id == zone_id:
+   24:                     elements = [tag.tag_id for tag in zone.rfid_reader.rfid_tags]
+    2:                     return elements
+>>>>>>         except IndexError:
+>>>>>>             return []
+       
+>>>>>>     def get_tag_by_id(self, tag_id: int) -> RFIDTag:
+   61:         for tag in self.rfid_tags:
+   61:             if tag.tag_id == tag_id:
+    1:                 return tag
+>>>>>>         return None
+       
+>>>>>>     def get_item_info_by_id(self, item_tag_id: int) -> Item:
+   22:         for item in self.items:
+   22:             if item.rfid_tag_id == item_tag_id:
+    1:                 return item
+>>>>>>         return None
+       
+>>>>>>     @check_access_control("add_item")
+>>>>>>     def add_item(self, employee: Employee, item: Item, tag: RFIDTag) -> bool:
+  110:         if len(self.items) < self.capacity:
+  110:             self.items.append(item)
+  110:             self.rfid_tags.append(tag)
+  110:             return True
+>>>>>>         return False
+       
+>>>>>>     def remove_item(self, item_id: int) -> bool:
+>>>>>>         for item in self.items:
+>>>>>>             if item.item_id == item_id:
+>>>>>>                 tag_id = item.get_rfid_tag_id()
+>>>>>>                 self.items.remove(item)
+>>>>>>                 for tag in self.rfid_tags:
+>>>>>>                     if tag.tag_id == tag_id:
+>>>>>>                         self.items.remove(tag)
+>>>>>>                 return True
+>>>>>>         return False
+       
+>>>>>>     def add_zone(self, zone: Zone):
+   11:         self.zones.append(zone)
+       
+>>>>>>     def remove_zone(self, zone_id: int) -> bool:
+>>>>>>         for zone in self.zones:
+>>>>>>             if zone.id == zone_id:
+>>>>>>                 self.zones.remove(zone)
+>>>>>>                 return True
+>>>>>>         return False
+       
+>>>>>>     def add_employee(self, employee: Employee):
+    1:         self.employee.append(employee)
+       
+>>>>>>     def remove_employee(self, employee_id: int) -> bool:
+>>>>>>         for employee in self.employee:
+>>>>>>             if employee.employee_id == employee_id:
+>>>>>>                 self.employee.remove(employee)
+>>>>>>                 return True
+>>>>>>         return False
+       
+>>>>>>     def add_tag_to_zone(self, zone_id: int, tag: RFIDTag) -> bool:
+  665:         for zone in self.zones:
+  665:             if zone.id == zone_id:
+  112:                 zone_index = self.zones.index(zone)
+  112:                 self.zones[zone_index].add_rfid_tag(tag)
+  112:                 return True
+>>>>>>         return False
+       
+>>>>>>     def remove_tag_from_zone(self, zone_id: int, tag_id: int) -> bool:
+    7:         for zone in self.zones:
+    7:             if zone.id == zone_id:
+    1:                 zone_index = self.zones.index(zone)
+    1:                 self.zones[zone_index].remove_rfid_tag(tag_id)
+    1:                 return True
+>>>>>>         return False
+       
+>>>>>>     def move_item(self, tag: RFIDTag, zoneFrom_id: int, zoneTo_id: int):
+    1:         self.remove_tag_from_zone(zoneFrom_id, tag.tag_id)
+    1:         self.add_tag_to_zone(zoneTo_id, tag)
+       
+>>>>>>     def find_tag_in_warehouse(self, target_tag_id: int ) -> bool:
+    3:         for zone in self.zones:
+    3:             if zone.is_tag_in_zone(target_tag_id):
+    1:                 return True
+>>>>>>         return False
+       
+>>>>>>     def find_item_location(self, item_tag_id: int) -> int:
+   13:         for zone in self.zones:
+  134:             for tag in zone.rfid_reader.rfid_tags:
+  123:                 if tag.tag_id == item_tag_id:
+    2:                     return zone.get_zone_id()
+>>>>>>         return -1
+       
+>>>>>>     def find_zone_location_of_item(self, item_tag_id: int) -> int:
+    3:         for _, zone in enumerate(self.zones):
+   24:             for tag in zone.rfid_reader.rfid_tags:
+   22:                 if tag.tag_id == item_tag_id:
+    1:                     return zone.id
+>>>>>>         return -1
+       
+           # Iterator pattern
+>>>>>>     def __iter__(self):
+    1:         return iter(self.zones)
+       
+           # Observer design
+>>>>>>     def add_observer_to_all_readers(self, observer: Employee):
+    1:         for zone in self.zones:
+>>>>>>             zone.add_observer(observer)
+       
+>>>>>>     def remove_observer_from_zones(self, observer: Employee):
+>>>>>>         for zone in self.zones:
+>>>>>>             zone.remove_observer(observer)

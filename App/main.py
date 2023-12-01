@@ -1,3 +1,6 @@
+import sys
+import trace
+
 from models.item import Item
 from models.zone import Zone
 from models.rfidTag import RFIDTag
@@ -5,7 +8,7 @@ from models.rfidReader import RFIDReader
 from models.employee import Employee, Role
 from models.warehouse import Warehouse
 
-if __name__ == "__main__":
+def main():
 
     warehouse = Warehouse(145)
 
@@ -93,3 +96,10 @@ if __name__ == "__main__":
     result = warehouse.find_item_location(item)
     assert result != -1, f"Item {item} does not exist"
     print(f"\nFind item {item}: zone {result}")
+
+if __name__ == "__main__":
+    tracer = trace.Trace(trace=False, ignoredirs=[sys.prefix, sys.exec_prefix])
+    tracer.run('main()')
+    
+    r = tracer.results()
+    r.write_results(show_missing=True, coverdir="./tema6")

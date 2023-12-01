@@ -1,0 +1,50 @@
+>>>>>> from models.rfidTag import RFIDTag
+       
+>>>>>> class RFIDReader:
+       
+>>>>>>     def __init__(self, reader_id: int, zone_id: int):
+   11:         self.reader_id = reader_id
+   11:         self.location = zone_id
+   11:         self.connected = False
+   11:         self.rfid_tags = []
+       
+>>>>>>     def add_rfid_tag(self, tag: RFIDTag):
+  112:         self.rfid_tags.append(tag)
+       
+>>>>>>     def remove_rfid_tag(self, tag_id: int):
+   12:         self.rfid_tags = [tag for tag in self.rfid_tags if tag.tag_id != tag_id]
+       
+>>>>>>     def get_rfid_tags(self) -> list:
+>>>>>>         return self.rfid_tags
+       
+>>>>>>     def connect(self):
+>>>>>>         self.connected = True
+>>>>>>         print(f"RFID reader {self.reader_id} connected at {self.location}")
+       
+>>>>>>     def disconnect(self):
+>>>>>>         self.connected = False
+>>>>>>         print(f"RFID reader {self.reader_id} disconnected")
+               
+>>>>>>     def get_reader_id(self):
+>>>>>>         return self.reader_id
+       
+>>>>>>     def get_location(self):
+>>>>>>         return self.location
+       
+>>>>>>     def is_connected(self):
+>>>>>>         return self.connected
+           
+           # Iterator pattern
+>>>>>>     def __iter__(self):
+   14:         self.index = 0
+   14:         return self
+       
+>>>>>>     def __next__(self):
+  155:         if self.index < len(self.rfid_tags):
+  142:             tag = self.rfid_tags[self.index]
+  142:             self.index += 1
+  142:             return tag
+               else:
+   13:             raise StopIteration
+               
+               

@@ -1,0 +1,30 @@
+>>>>>> from aspectlib import Aspect
+>>>>>> from models.employee import Employee 
+>>>>>> from functools import wraps
+       
+>>>>>> class AccessControl:
+>>>>>>     def __init__(self):
+    1:         self.employee_roles = {}
+       
+>>>>>>     def assign_role(self, employee, role):
+    1:         self.employee_roles[employee.employee_id] = role
+       
+>>>>>>     def check_access(self, employee, required_permission):
+  110:         if employee.employee_id in self.employee_roles:
+  110:             employee_role = self.employee_roles[employee.employee_id]
+  110:             return employee_role.check_permission(required_permission)
+               else:
+>>>>>>             return False
+       
+       # Aspect for checking access control
+>>>>>> def check_access_control(permission):
+>>>>>>     def decorator(func):
+>>>>>>         @wraps(func)
+>>>>>>         def wrapper(self, *args, **kwargs):
+  110:             employee = args[0]  # Assuming the first argument is an Employee instance
+  110:             if self.access_control.check_access(employee, permission):
+  110:                 return func(self, *args, **kwargs)
+                   else:
+>>>>>>                 print(f"Access denied: Employee {employee.employee_id} does not have the required permission.")
+>>>>>>         return wrapper
+>>>>>>     return decorator
