@@ -8,20 +8,20 @@ from models.rfidReader import RFIDReader
 from models.employee import Employee, Role
 from models.warehouse import Warehouse
 
-
 def main():
 
     warehouse = Warehouse(145)
 
     # Create roles
-    # admin_role = Role(["add_tag", "remove_tag"])
-    basic_role = Role(["add_item"])
+    admin_role = Role(["add_item","remove_item",
+                       "add_zone","remove_zone",
+                       "remove_employee","add_employee"],)
 
     # create employee
-    employee = Employee(12,"employee1",basic_role)
+    employee = Employee(12,"employee1",admin_role)
     warehouse.add_employee(employee)
 
-    warehouse.access_control.assign_role(employee, basic_role)
+    warehouse.access_control.assign_role(employee, admin_role)
 
     # generate zones, items, and tags
     id = -1
@@ -32,7 +32,7 @@ def main():
         reader = RFIDReader(id, id)
         zone.add_rfid_reader(reader)
 
-        warehouse.add_zone(zone)
+        warehouse.add_zone(employee,zone)
 
         tag_id = id*10
         for _ in range(10):
@@ -43,8 +43,6 @@ def main():
             result = warehouse.add_item(employee, item, tag)
             if not result:
                 print("Warehouse is at full capacity. Cannot add more items.")
-            elif result == -1:
-                print("Invalid tag_id")
 
             result = warehouse.add_tag_to_zone(id, tag)
             assert result, f"Zone {id} does not exist"
@@ -104,6 +102,9 @@ def main():
     print(f"\nFind item {item}: zone {result}")
 
 if __name__ == "__main__":
+    with open("App/output.txt", 'w') as file:
+        file.write("Fuctions messages.\n")
+
     tracer = trace.Trace(trace=False, ignoredirs=[sys.prefix, sys.exec_prefix])
     tracer.run('main()')
     

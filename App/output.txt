@@ -1,0 +1,1389 @@
+Fuctions messages.
+Calling function: add_employee from Warehouse
+Access denied: Employee 12 does not have the required permission.
+Function add_employee from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_rfid_reader from Zone
+Function add_rfid_reader from RFIDReader has been executed.
+Calling function: add_zone from Warehouse
+Access permitted: Employee 12 has the required permission.
+Function add_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Access permitted: Employee 12 has the required permission.
+Calling function: add_item from Warehouse
+Function add_item from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Calling function: find_tag_in_warehouse from Warehouse
+Calling function: is_tag_in_zone from Zone
+Function is_tag_in_zone from RFIDReader has been executed.
+Calling function: is_tag_in_zone from Zone
+Function is_tag_in_zone from RFIDReader has been executed.
+Calling function: is_tag_in_zone from Zone
+Function is_tag_in_zone from RFIDReader has been executed.
+Function find_tag_in_warehouse from Warehouse has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_items from Zone
+Function get_items from RFIDReader has been executed.
+Calling function: find_item_location from Warehouse
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Function find_item_location from Warehouse has been executed.
+Calling function: get_item_info_by_id from Warehouse
+Function get_item_info_by_id from Warehouse has been executed.
+Calling function: find_zone_location_of_item from Warehouse
+Function find_zone_location_of_item from Warehouse has been executed.
+Calling function: add_observer_to_all_readers from Warehouse
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Calling function: add_observer from Zone
+Function add_observer from RFIDReader has been executed.
+Function add_observer_to_all_readers from Warehouse has been executed.
+Calling function: get_tag_by_id from Warehouse
+Function get_tag_by_id from Warehouse has been executed.
+Calling function: move_item from Warehouse
+Calling function: remove_tag_from_zone from Warehouse
+Calling function: remove_rfid_tag from Zone
+Calling function: remove_rfid_tag from RFIDReader
+Function remove_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function remove_rfid_tag from RFIDReader has been executed.
+Function remove_tag_from_zone from Warehouse has been executed.
+Calling function: add_tag_to_zone from Warehouse
+Calling function: add_rfid_tag from Zone
+Calling function: add_rfid_tag from RFIDReader
+Function add_rfid_tag from RFIDReader has been executed.
+Calling function: notify_observers from Zone
+Function notify_observers from RFIDReader has been executed.
+Function add_rfid_tag from RFIDReader has been executed.
+Function add_tag_to_zone from Warehouse has been executed.
+Function move_item from Warehouse has been executed.
+Calling function: get_tags_id_from_zone from Warehouse
+Function get_tags_id_from_zone from Warehouse has been executed.
+Calling function: get_tags_id_from_zone from Warehouse
+Function get_tags_id_from_zone from Warehouse has been executed.
+Calling function: find_item_location from Warehouse
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Function find_item_location from Warehouse has been executed.

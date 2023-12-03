@@ -17,14 +17,20 @@ class AccessControl:
             return False
 
 # Aspect for checking access control
-def check_access_control(permission):
+def check_access_control(permission, filename="App/output.txt"):
     def decorator(func):
         @wraps(func)
         def wrapper(self, *args, **kwargs):
             employee = args[0]  # Assuming the first argument is an Employee instance
             if self.access_control.check_access(employee, permission):
+                with open(filename, 'a') as file:
+                    #file.write(f"Employee {employee.employee_id} has called {permission}.\n")
+                    file.write(f"Access permitted: Employee {employee.employee_id} has the required permission.\n")
                 return func(self, *args, **kwargs)
             else:
-                print(f"Access denied: Employee {employee.employee_id} does not have the required permission.")
+                with open(filename, 'a') as file:
+                    #file.write(f"Employee {employee.employee_id} has called {func.__name__}.\n")
+                    file.write(f"Access denied: Employee {employee.employee_id} does not have the required permission.\n")
+                #print(f"Access denied: Employee {employee.employee_id} does not have the required permission.")
         return wrapper
     return decorator

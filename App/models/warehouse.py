@@ -4,7 +4,7 @@ from models.rfidTag import RFIDTag
 from models.employee import Employee
 from security import AccessControl, check_access_control
 
-from monitors import validate_tag, log_function_name
+from monitors import validate_tag, print_function_name_before_execution, print_function_name_after_execution
 class Warehouse:
 
     _instance = None
@@ -32,7 +32,8 @@ class Warehouse:
     def get_rfid_tags(self):
         return self.rfid_tags
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def get_tags_id_from_zone(self, zone_id: int):
         try:
             for zone in self.zones:
@@ -42,14 +43,16 @@ class Warehouse:
         except IndexError:
             return []
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def get_tag_by_id(self, tag_id: int) -> RFIDTag:
         for tag in self.rfid_tags:
             if tag.tag_id == tag_id:
                 return tag
         return None
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def get_item_info_by_id(self, item_tag_id: int) -> Item:
         for item in self.items:
             if item.rfid_tag_id == item_tag_id:
@@ -58,6 +61,8 @@ class Warehouse:
 
     @check_access_control("add_item")
     @validate_tag
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def add_item(self, employee: Employee, item: Item, tag: RFIDTag) -> bool:
         if len(self.items) < self.capacity:
             self.items.append(item)
@@ -65,8 +70,10 @@ class Warehouse:
             return True
         return False
 
-    @log_function_name("Warehouse")
-    def remove_item(self, item_id: int) -> bool:
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
+    @check_access_control("remove_item")
+    def remove_item(self, employee: Employee, item_id: int) -> bool:
         for item in self.items:
             if item.item_id == item_id:
                 tag_id = item.get_rfid_tag_id()
@@ -77,31 +84,40 @@ class Warehouse:
                 return True
         return False
 
-    @log_function_name("Warehouse")
-    def add_zone(self, zone: Zone):
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
+    @check_access_control("add_zone")
+    def add_zone(self, employee: Employee, zone: Zone):
         self.zones.append(zone)
 
-    @log_function_name("Warehouse")
-    def remove_zone(self, zone_id: int) -> bool:
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
+    @check_access_control("remove_zone")
+    def remove_zone(self, employee: Employee, zone_id: int) -> bool:
         for zone in self.zones:
             if zone.id == zone_id:
                 self.zones.remove(zone)
                 return True
         return False
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
+    @check_access_control("add_employee")
     def add_employee(self, employee: Employee):
         self.employee.append(employee)
 
-    @log_function_name("Warehouse")
-    def remove_employee(self, employee_id: int) -> bool:
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
+    @check_access_control("remove_employee")
+    def remove_employee(self, employee: Employee, employee_id: int) -> bool:
         for employee in self.employee:
             if employee.employee_id == employee_id:
                 self.employee.remove(employee)
                 return True
         return False
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def add_tag_to_zone(self, zone_id: int, tag: RFIDTag) -> bool:
         for zone in self.zones:
             if zone.id == zone_id:
@@ -110,7 +126,8 @@ class Warehouse:
                 return True
         return False
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def remove_tag_from_zone(self, zone_id: int, tag_id: int) -> bool:
         for zone in self.zones:
             if zone.id == zone_id:
@@ -119,19 +136,22 @@ class Warehouse:
                 return True
         return False
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def move_item(self, tag: RFIDTag, zoneFrom_id: int, zoneTo_id: int):
         self.remove_tag_from_zone(zoneFrom_id, tag.tag_id)
         self.add_tag_to_zone(zoneTo_id, tag)
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def find_tag_in_warehouse(self, target_tag_id: int ) -> bool:
         for zone in self.zones:
             if zone.is_tag_in_zone(target_tag_id):
                 return True
         return False
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def find_item_location(self, item_tag_id: int) -> int:
         for zone in self.zones:
             for tag in zone.rfid_reader.rfid_tags:
@@ -139,7 +159,8 @@ class Warehouse:
                     return zone.get_zone_id()
         return -1
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def find_zone_location_of_item(self, item_tag_id: int) -> int:
         for _, zone in enumerate(self.zones):
             for tag in zone.rfid_reader.rfid_tags:
@@ -152,12 +173,14 @@ class Warehouse:
         return iter(self.zones)
 
     # Observer design
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def add_observer_to_all_readers(self, observer: Employee):
         for zone in self.zones:
             zone.add_observer(observer)
 
-    @log_function_name("Warehouse")
+    @print_function_name_before_execution("Warehouse")
+    @print_function_name_after_execution("Warehouse")
     def remove_observer_from_zones(self, observer: Employee):
         for zone in self.zones:
             zone.remove_observer(observer)

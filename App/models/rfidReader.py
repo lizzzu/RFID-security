@@ -1,6 +1,6 @@
 from models.rfidTag import RFIDTag
 
-from monitors import log_function_name
+from monitors import print_function_name_before_execution, print_function_name_after_execution
 class RFIDReader:
 
     def __init__(self, reader_id: int, zone_id: int):
@@ -9,11 +9,13 @@ class RFIDReader:
         self.connected = False
         self.rfid_tags = []
 
-    @log_function_name("RFIDReader")
+    @print_function_name_before_execution("RFIDReader")
+    @print_function_name_after_execution("RFIDReader")
     def add_rfid_tag(self, tag: RFIDTag):
         self.rfid_tags.append(tag)
 
-    @log_function_name("RFIDReader")
+    @print_function_name_before_execution("RFIDReader")
+    @print_function_name_after_execution("RFIDReader")
     def remove_rfid_tag(self, tag_id: int):
         self.rfid_tags = [tag for tag in self.rfid_tags if tag.tag_id != tag_id]
 
