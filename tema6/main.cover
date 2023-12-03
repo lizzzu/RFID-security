@@ -1,0 +1,111 @@
+>>>>>> import sys
+>>>>>> import trace
+       
+>>>>>> from models.item import Item
+>>>>>> from models.zone import Zone
+>>>>>> from models.rfidTag import RFIDTag
+>>>>>> from models.rfidReader import RFIDReader
+>>>>>> from models.employee import Employee, Role
+>>>>>> from models.warehouse import Warehouse
+       
+       
+>>>>>> def main():
+       
+    1:     warehouse = Warehouse(145)
+       
+           # Create roles
+           # admin_role = Role(["add_tag", "remove_tag"])
+    1:     basic_role = Role(["add_item"])
+       
+           # create employee
+    1:     employee = Employee(12,"employee1",basic_role)
+    1:     warehouse.add_employee(employee)
+       
+    1:     warehouse.access_control.assign_role(employee, basic_role)
+       
+           # generate zones, items, and tags
+    1:     id = -1
+   12:     while( id != 10):
+       
+   11:         id += 1
+   11:         zone = Zone(id,"")
+   11:         reader = RFIDReader(id, id)
+   11:         zone.add_rfid_reader(reader)
+       
+   11:         warehouse.add_zone(zone)
+       
+   11:         tag_id = id*10
+  121:         for _ in range(10):
+  110:             tag_id += 1
+  110:             item = Item(tag_id, f"item {id}", tag_id)
+  110:             tag = RFIDTag(tag_id)
+       
+  110:             result = warehouse.add_item(employee, item, tag)
+  110:             if not result:
+>>>>>>                 print("Warehouse is at full capacity. Cannot add more items.")
+  110:             elif result == -1:
+>>>>>>                 print("Invalid tag_id")
+       
+  110:             result = warehouse.add_tag_to_zone(id, tag)
+  110:             assert result, f"Zone {id} does not exist"
+       
+           # add tag in zone 2 - employee is notified
+    1:     zone = 2
+    1:     tag333 = RFIDTag(333)
+    1:     result = warehouse.add_tag_to_zone(zone, tag333)
+    1:     assert result, f"Zone {zone} does not exist"
+       
+           # find tag in warehouse
+    1:     target_tag_id = 333
+    1:     result = warehouse.find_tag_in_warehouse(target_tag_id)
+    1:     assert result, f"Tag {target_tag_id} does not exist"
+       
+           # print zone and their tags
+   12:     for zone in warehouse:
+   11:         print(f"Zone: {zone.get_zone_id()}")
+       
+   11:         zone_tags = zone.get_items()
+  122:         print(f"  Tags in the zone: {[tag.tag_id for tag in zone_tags]}")
+       
+           # find item in warehouse
+    1:     tag_id_to_search = 22
+    1:     result = warehouse.find_item_location(tag_id_to_search)
+    1:     assert result != -1, f"Tag {tag_id_to_search} does not exist"
+    1:     print(f"\nTag location: {result}")
+       
+           # get item info
+    1:     item = 22
+    1:     result = warehouse.get_item_info_by_id(item)
+    1:     assert result, f"Item {item} does not exist"
+    1:     print(f"Item info: {result}")
+       
+           # get item location(zone id)
+    1:     result = warehouse.find_zone_location_of_item(item)
+    1:     assert result != -1, f"Item {item} does not exist"
+    1:     print(f"Tag location: {result}\n")
+       
+           # add observer - send message to observer when an item was add/remove from a zone
+    1:     warehouse.add_observer_to_all_readers(employee)
+       
+           # move item from one zone to another
+    1:     tag_id_to_search = 61
+    1:     tag = warehouse.get_tag_by_id(tag_id_to_search)
+    1:     assert tag, f"Tag {tag_id_to_search} does not exist"
+    1:     warehouse.move_item(tag, 6, 1)
+       
+    1:     print()
+    1:     print(warehouse.get_tags_id_from_zone(1))
+    1:     print(warehouse.get_tags_id_from_zone(6))
+       
+           # find item in warehouse
+    1:     item = 100
+    1:     result = warehouse.find_item_location(item)
+    1:     assert result != -1, f"Item {item} does not exist"
+    1:     print(f"\nFind item {item}: zone {result}")
+       
+>>>>>> if __name__ == "__main__":
+>>>>>>     tracer = trace.Trace(trace=False, ignoredirs=[sys.prefix, sys.exec_prefix])
+>>>>>>     tracer.run('main()')
+           
+>>>>>>     r = tracer.results()
+>>>>>>     r.write_results(show_missing=True, coverdir="./tema6")

@@ -39,6 +39,6 @@
        
            # Observer pattern
 >>>>>>     def update(self, tag_id, action):
->>>>>>         print(f"employee id={self.employee_id}: Tag '{tag_id}' was {action}.")
+    2:         print(f"employee id={self.employee_id}: Tag '{tag_id}' was {action}.")
        
            

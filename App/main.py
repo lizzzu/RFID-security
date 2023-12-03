@@ -8,6 +8,7 @@ from models.rfidReader import RFIDReader
 from models.employee import Employee, Role
 from models.warehouse import Warehouse
 
+
 def main():
 
     warehouse = Warehouse(145)
@@ -19,7 +20,6 @@ def main():
     # create employee
     employee = Employee(12,"employee1",basic_role)
     warehouse.add_employee(employee)
-    warehouse.add_observer_to_all_readers(employee)
 
     warehouse.access_control.assign_role(employee, basic_role)
 
@@ -43,6 +43,8 @@ def main():
             result = warehouse.add_item(employee, item, tag)
             if not result:
                 print("Warehouse is at full capacity. Cannot add more items.")
+            elif result == -1:
+                print("Invalid tag_id")
 
             result = warehouse.add_tag_to_zone(id, tag)
             assert result, f"Zone {id} does not exist"
@@ -82,12 +84,16 @@ def main():
     assert result != -1, f"Item {item} does not exist"
     print(f"Tag location: {result}\n")
 
+    # add observer - send message to observer when an item was add/remove from a zone
+    warehouse.add_observer_to_all_readers(employee)
+
     # move item from one zone to another
     tag_id_to_search = 61
     tag = warehouse.get_tag_by_id(tag_id_to_search)
     assert tag, f"Tag {tag_id_to_search} does not exist"
     warehouse.move_item(tag, 6, 1)
 
+    print()
     print(warehouse.get_tags_id_from_zone(1))
     print(warehouse.get_tags_id_from_zone(6))
 
