@@ -10,27 +10,26 @@
     1:         self.employee_roles[employee.employee_id] = role
        
 >>>>>>     def check_access(self, employee, required_permission):
-  122:         if employee.employee_id in self.employee_roles:
-  121:             employee_role = self.employee_roles[employee.employee_id]
-  121:             return employee_role.check_permission(required_permission)
-               else:
-    1:             return False
+               #if employee.employee_id in self.employee_roles:
+  121:         employee_role = employee.role.permissions 
+  121:         return required_permission in employee_role
+               #else:
+               #    return False
        
-       # Aspect for checking access control
 >>>>>> def check_access_control(permission, filename="App/output.txt"):
 >>>>>>     def decorator(func):
 >>>>>>         @wraps(func)
 >>>>>>         def wrapper(self, *args, **kwargs):
-  122:             employee = args[0]  # Assuming the first argument is an Employee instance
-  122:             if self.access_control.check_access(employee, permission):
+  121:             employee = args[0]  # Assuming the first argument is an Employee instance
+  121:             if self.access_control.check_access(employee, permission):
   242:                 with open(filename, 'a') as file:
                            #file.write(f"Employee {employee.employee_id} has called {permission}.\n")
   121:                     file.write(f"Access permitted: Employee {employee.employee_id} has the required permission.\n")
   121:                 return func(self, *args, **kwargs)
                    else:
-    2:                 with open(filename, 'a') as file:
+>>>>>>                 with open(filename, 'a') as file:
                            #file.write(f"Employee {employee.employee_id} has called {func.__name__}.\n")
-    1:                     file.write(f"Access denied: Employee {employee.employee_id} does not have the required permission.\n")
+>>>>>>                     file.write(f"Access denied: Employee {employee.employee_id} does not have the required permission.\n")
                        #print(f"Access denied: Employee {employee.employee_id} does not have the required permission.")
 >>>>>>         return wrapper
 >>>>>>     return decorator

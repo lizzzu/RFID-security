@@ -10,13 +10,12 @@ class AccessControl:
         self.employee_roles[employee.employee_id] = role
 
     def check_access(self, employee, required_permission):
-        if employee.employee_id in self.employee_roles:
-            employee_role = self.employee_roles[employee.employee_id]
-            return employee_role.check_permission(required_permission)
-        else:
-            return False
+        #if employee.employee_id in self.employee_roles:
+        employee_role = employee.role.permissions 
+        return required_permission in employee_role
+        #else:
+        #    return False
 
-# Aspect for checking access control
 def check_access_control(permission, filename="App/output.txt"):
     def decorator(func):
         @wraps(func)

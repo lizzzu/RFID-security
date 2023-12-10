@@ -22,6 +22,9 @@ class Warehouse:
 
     def get_capacity(self):
         return self.capacity
+    
+    def get_employee(self):
+        return self.employee
 
     def get_zones(self):
         return self.zones
@@ -40,7 +43,8 @@ class Warehouse:
                 if zone.id == zone_id:
                     elements = [tag.tag_id for tag in zone.rfid_reader.rfid_tags]
                     return elements
-        except IndexError:
+            return []
+        except:
             return []
 
     @print_function_name_before_execution("Warehouse")
@@ -80,7 +84,7 @@ class Warehouse:
                 self.items.remove(item)
                 for tag in self.rfid_tags:
                     if tag.tag_id == tag_id:
-                        self.items.remove(tag)
+                        self.rfid_tags.remove(tag)
                 return True
         return False
 
@@ -102,7 +106,7 @@ class Warehouse:
 
     @print_function_name_before_execution("Warehouse")
     @print_function_name_after_execution("Warehouse")
-    @check_access_control("add_employee")
+    #@check_access_control("add_employee")
     def add_employee(self, employee: Employee):
         self.employee.append(employee)
 
