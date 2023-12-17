@@ -3,8 +3,8 @@ from models.zone import Zone
 from models.rfidTag import RFIDTag
 from models.employee import Employee
 from security import AccessControl, check_access_control
-
 from monitors import validate_tag, print_function_name_before_execution, print_function_name_after_execution
+
 class Warehouse:
 
     _instance = None

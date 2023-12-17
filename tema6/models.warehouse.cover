@@ -3,8 +3,8 @@
 >>>>>> from models.rfidTag import RFIDTag
 >>>>>> from models.employee import Employee
 >>>>>> from security import AccessControl, check_access_control
-       
 >>>>>> from monitors import validate_tag, print_function_name_before_execution, print_function_name_after_execution
+       
 >>>>>> class Warehouse:
        
 >>>>>>     _instance = None
@@ -41,9 +41,10 @@
     2:         try:
     9:             for zone in self.zones:
     9:                 if zone.id == zone_id:
-   22:                     elements = [tag.tag_id for tag in zone.rfid_reader.rfid_tags]
+   24:                     elements = [tag.tag_id for tag in zone.rfid_reader.rfid_tags]
     2:                     return elements
->>>>>>         except IndexError:
+>>>>>>             return []
+>>>>>>         except:
 >>>>>>             return []
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
@@ -107,7 +108,7 @@
 >>>>>>     @print_function_name_after_execution("Warehouse")
            #@check_access_control("add_employee")
 >>>>>>     def add_employee(self, employee: Employee):
-    1:         self.employee.append(employee)
+    2:         self.employee.append(employee)
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")

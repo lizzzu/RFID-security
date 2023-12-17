@@ -1,4 +1,5 @@
 import sys
+import json
 import trace
 
 from models.item import Item
@@ -8,51 +9,84 @@ from models.rfidReader import RFIDReader
 from models.employee import Employee, Role
 from models.warehouse import Warehouse
 
+def add_to_json(data_key, key, value, data_to_add):
+    global data
+
+    index, _ = next(((i, d) for i, d in enumerate(data[data_key]) if d.get(key) == value), (None, None))
+    if index is None:
+        data[data_key] += [data_to_add]
+        return len(data[data_key]) - 1
+
+    data[data_key][index] = data_to_add
+    return index
+
 def main():
+    global db, data
 
-    warehouse = Warehouse(145)
+    capacity = 230
+    warehouse = Warehouse(capacity)
+    data["capacity"] = capacity
 
-    # Create roles
+    # create roles
     admin_role = Role(["add_item","remove_item",
                        "add_zone","remove_zone",
-                       "remove_employee","add_employee"],)
+                       "add_employee","remove_employee"])
 
-    # create employee
-    employee = Employee(12,"employee1",admin_role)
+    employee_role = Role(["add_item","remove_item"])
+
+    # create employees
+    id = 12
+    admin = Employee(id, "admin", admin_role)
+    warehouse.add_employee(admin)
+    warehouse.access_control.assign_role(admin, admin_role)
+
+    add_to_json("employees", "id", id, admin.serialize())
+
+    id = 41
+    employee = Employee(id, "employee1", employee_role)
     warehouse.add_employee(employee)
+    warehouse.access_control.assign_role(employee, employee_role)
 
-    warehouse.access_control.assign_role(employee, admin_role)
+    add_to_json("employees", "id", id, employee.serialize())
 
     # generate zones, items, and tags
     id = -1
     while( id != 10):
 
         id += 1
-        zone = Zone(id,"")
+        zone = Zone(id, "")
         reader = RFIDReader(id, id)
         zone.add_rfid_reader(reader)
 
-        warehouse.add_zone(employee,zone)
+        warehouse.add_zone(admin,zone)
 
-        tag_id = id*10
+        index = add_to_json("zones", "id", id, zone.serialize())
+
+        item_id = id*10
         for _ in range(10):
-            tag_id += 1
-            item = Item(tag_id, f"item {id}", tag_id)
+            item_id += 1
+            tag_id = item_id
+            item = Item(item_id, f"item {id}", tag_id)
             tag = RFIDTag(tag_id)
 
-            result = warehouse.add_item(employee, item, tag)
+            result = warehouse.add_item(admin, item, tag)
             if not result:
                 print("Warehouse is at full capacity. Cannot add more items.")
 
             result = warehouse.add_tag_to_zone(id, tag)
             assert result, f"Zone {id} does not exist"
 
+            add_to_json("tags", "id", tag_id, tag.serialize())
+            add_to_json("items", "id", item_id, item.serialize())
+            if item_id not in data["zones"][index]["items"]:
+                data["zones"][index]["items"] += [item_id]
+
     # add tag in zone 2 - employee is notified
     zone = 2
     tag333 = RFIDTag(333)
     result = warehouse.add_tag_to_zone(zone, tag333)
     assert result, f"Zone {zone} does not exist"
-
+ 
     # find tag in warehouse
     target_tag_id = 333
     result = warehouse.find_tag_in_warehouse(target_tag_id)
@@ -83,7 +117,7 @@ def main():
     print(f"Tag location: {result}\n")
 
     # add observer - send message to observer when an item was add/remove from a zone
-    warehouse.add_observer_to_all_readers(employee)
+    warehouse.add_observer_to_all_readers(admin)
 
     # move item from one zone to another
     tag_id_to_search = 61
@@ -102,11 +136,28 @@ def main():
     print(f"\nFind item {item}: zone {result}")
 
 if __name__ == "__main__":
+    db = './database.json'
+
+    try:
+        with open(db, 'r') as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        data = {
+            "capacity": -1,
+            "employees": [],
+            "zones": [],
+            "items": [],
+            "tags": []
+        }
+
     with open("App/output.txt", 'w') as file:
         file.write("Fuctions messages.\n")
 
     tracer = trace.Trace(trace=False, ignoredirs=[sys.prefix, sys.exec_prefix])
     tracer.run('main()')
-    
+
     r = tracer.results()
     r.write_results(show_missing=True, coverdir="./tema6")
+
+    with open(db, 'w') as file:
+        json.dump(data, file, indent=4)

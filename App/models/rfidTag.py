@@ -19,4 +19,10 @@ class RFIDTag:
         self.status = "Active"
 
     def __str__(self):
-        return f"RFIDTag(ID: {self.tag_id}, Location: {self.location}, Status: {self.status})"
+        return f"RFIDTag(ID: {self.tag_id}, Status: {self.status})"
+    
+    def serialize(self):
+        return {
+            "id": self.tag_id,
+            "status": self.status
+        }

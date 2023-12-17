@@ -28,3 +28,10 @@ class Item:
     def __str__(self):
         """Return a string representation of the item."""
         return f"Item ID: {self.item_id}, Name: {self.name} RFID Tag ID: {self.rfid_tag_id}"
+
+    def serialize(self):
+        return {
+            "id": self.item_id,
+            "name": self.name,
+            "tag_id": self.rfid_tag_id
+        }

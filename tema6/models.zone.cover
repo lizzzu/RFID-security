@@ -74,3 +74,10 @@
 >>>>>>     def notify_observers(self, tag_id, action):
   115:         for observer in self.observers:
     2:             observer.update(tag_id, action)
+       
+>>>>>>     def serialize(self):
+   11:         return {
+   11:             "id": self.id,
+   11:             "name": self.name,
+   11:             "items": []
+               }

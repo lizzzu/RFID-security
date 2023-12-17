@@ -7,7 +7,7 @@
     1:         self.employee_roles = {}
        
 >>>>>>     def assign_role(self, employee, role):
-    1:         self.employee_roles[employee.employee_id] = role
+    2:         self.employee_roles[employee.employee_id] = role
        
 >>>>>>     def check_access(self, employee, required_permission):
                #if employee.employee_id in self.employee_roles:
@@ -22,7 +22,7 @@
 >>>>>>         def wrapper(self, *args, **kwargs):
   121:             employee = args[0]  # Assuming the first argument is an Employee instance
   121:             if self.access_control.check_access(employee, permission):
-  242:                 with open(filename, 'a') as file:
+  121:                 with open(filename, 'a') as file:
                            #file.write(f"Employee {employee.employee_id} has called {permission}.\n")
   121:                     file.write(f"Access permitted: Employee {employee.employee_id} has the required permission.\n")
   121:                 return func(self, *args, **kwargs)

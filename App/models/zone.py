@@ -74,3 +74,10 @@ class Zone:
     def notify_observers(self, tag_id, action):
         for observer in self.observers:
             observer.update(tag_id, action)
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "items": []
+        }

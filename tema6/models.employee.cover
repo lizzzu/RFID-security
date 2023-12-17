@@ -7,7 +7,7 @@
        
 >>>>>> class Role:
 >>>>>>     def __init__(self, permissions=[]):
-    1:         self.permissions = permissions
+    2:         self.permissions = permissions
        
 >>>>>>     def add_permission(self, permission):
 >>>>>>         self.permissions.append(permission)
@@ -15,12 +15,15 @@
 >>>>>>     def check_permission(self, required_permission):
 >>>>>>         return required_permission in self.permissions
            
+>>>>>>     def serialize(self):
+    2:         return self.permissions
+           
 >>>>>> class Employee:
        
 >>>>>>     def __init__(self, employee_id: int, name: str, role: Role):
-    1:         self.employee_id = employee_id
-    1:         self.name = name
-    1:         self.role = role
+    2:         self.employee_id = employee_id
+    2:         self.name = name
+    2:         self.role = role
        
 >>>>>>     def get_employee_id(self):
 >>>>>>         return self.employee_id
@@ -36,6 +39,13 @@
        
 >>>>>>     def set_role(self, value):
 >>>>>>         self.role = value
+           
+>>>>>>     def serialize(self):
+    2:         return {
+    2:             "id": self.employee_id,
+    2:             "name": self.name,
+    2:             "permissions": self.role.serialize()
+               }
        
            # Observer pattern
 >>>>>>     def update(self, tag_id, action):

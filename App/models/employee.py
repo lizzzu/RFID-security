@@ -15,6 +15,9 @@ class Role:
     def check_permission(self, required_permission):
         return required_permission in self.permissions
     
+    def serialize(self):
+        return self.permissions
+    
 class Employee:
 
     def __init__(self, employee_id: int, name: str, role: Role):
@@ -36,6 +39,13 @@ class Employee:
 
     def set_role(self, value):
         self.role = value
+    
+    def serialize(self):
+        return {
+            "id": self.employee_id,
+            "name": self.name,
+            "permissions": self.role.serialize()
+        }
 
     # Observer pattern
     def update(self, tag_id, action):
