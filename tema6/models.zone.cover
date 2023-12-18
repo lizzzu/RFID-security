@@ -5,9 +5,9 @@
 >>>>>> class Zone:
        
 >>>>>>     def __init__(self, id: int, name: str):
-   11:         self.name = name
-   11:         self.id = id
-   11:         self.observers = []
+   12:         self.name = name
+   12:         self.id = id
+   12:         self.observers = []
                #self.capacity = capacity
                #self.rfid_reader = RFIDReader
        
@@ -49,7 +49,7 @@
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def get_zone_id(self):
-   13:         return self.id
+   25:         return self.id
        
 >>>>>>     def __str__(self):
 >>>>>>         return f"name = {self.name}\nid = {self.id}"

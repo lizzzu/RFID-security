@@ -66,7 +66,7 @@ def main():
         for _ in range(10):
             item_id += 1
             tag_id = item_id
-            item = Item(item_id, f"item {id}", tag_id)
+            item = Item(item_id, f"item {item_id}", tag_id)
             tag = RFIDTag(tag_id)
 
             result = warehouse.add_item(admin, item, tag)
@@ -133,7 +133,18 @@ def main():
     item = 100
     result = warehouse.find_item_location(item)
     assert result != -1, f"Item {item} does not exist"
-    print(f"\nFind item {item}: zone {result}")
+    print(f"\nFind item {item}: zone {result}","\n\n")
+
+    # test access_control
+    role_employee = Role(["add_item","remove_item"])
+    employee1 = Employee(11,"Employee 11",role_employee)
+
+    zone = Zone(99,"Zone 99")
+    warehouse.add_zone(employee1,zone)
+    print(employee1.role.permissions)
+
+    for zone in warehouse:
+        print(f"Zone: {zone.get_zone_id()}")
 
 if __name__ == "__main__":
     db = './database.json'

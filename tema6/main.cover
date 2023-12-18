@@ -1,4 +1,5 @@
 >>>>>> import sys
+>>>>>> import json
 >>>>>> import trace
        
 >>>>>> from models.item import Item
@@ -8,51 +9,84 @@
 >>>>>> from models.employee import Employee, Role
 >>>>>> from models.warehouse import Warehouse
        
+>>>>>> def add_to_json(data_key, key, value, data_to_add):
+           global data
+       
+12512:     index, _ = next(((i, d) for i, d in enumerate(data[data_key]) if d.get(key) == value), (None, None))
+  233:     if index is None:
+>>>>>>         data[data_key] += [data_to_add]
+>>>>>>         return len(data[data_key]) - 1
+       
+  233:     data[data_key][index] = data_to_add
+  233:     return index
+       
 >>>>>> def main():
+           global db, data
        
-    1:     warehouse = Warehouse(145)
+    1:     capacity = 230
+    1:     warehouse = Warehouse(capacity)
+    1:     data["capacity"] = capacity
        
-           # Create roles
+           # create roles
     1:     admin_role = Role(["add_item","remove_item",
                               "add_zone","remove_zone",
-                              "remove_employee","add_employee"],)
+                              "add_employee","remove_employee"])
        
-           # create employee
-    1:     employee = Employee(12,"employee1",admin_role)
+    1:     employee_role = Role(["add_item","remove_item"])
+       
+           # create employees
+    1:     id = 12
+    1:     admin = Employee(id, "admin", admin_role)
+    1:     warehouse.add_employee(admin)
+    1:     warehouse.access_control.assign_role(admin, admin_role)
+       
+    1:     add_to_json("employees", "id", id, admin.serialize())
+       
+    1:     id = 41
+    1:     employee = Employee(id, "employee1", employee_role)
     1:     warehouse.add_employee(employee)
+    1:     warehouse.access_control.assign_role(employee, employee_role)
        
-    1:     warehouse.access_control.assign_role(employee, admin_role)
+    1:     add_to_json("employees", "id", id, employee.serialize())
        
            # generate zones, items, and tags
     1:     id = -1
    12:     while( id != 10):
        
    11:         id += 1
-   11:         zone = Zone(id,"")
+   11:         zone = Zone(id, "")
    11:         reader = RFIDReader(id, id)
    11:         zone.add_rfid_reader(reader)
        
-   11:         warehouse.add_zone(employee,zone)
+   11:         warehouse.add_zone(admin,zone)
        
-   11:         tag_id = id*10
+   11:         index = add_to_json("zones", "id", id, zone.serialize())
+       
+   11:         item_id = id*10
   121:         for _ in range(10):
-  110:             tag_id += 1
-  110:             item = Item(tag_id, f"item {id}", tag_id)
+  110:             item_id += 1
+  110:             tag_id = item_id
+  110:             item = Item(item_id, f"item {item_id}", tag_id)
   110:             tag = RFIDTag(tag_id)
        
-  110:             result = warehouse.add_item(employee, item, tag)
+  110:             result = warehouse.add_item(admin, item, tag)
   110:             if not result:
 >>>>>>                 print("Warehouse is at full capacity. Cannot add more items.")
        
   110:             result = warehouse.add_tag_to_zone(id, tag)
   110:             assert result, f"Zone {id} does not exist"
        
+  110:             add_to_json("tags", "id", tag_id, tag.serialize())
+  110:             add_to_json("items", "id", item_id, item.serialize())
+  110:             if item_id not in data["zones"][index]["items"]:
+  110:                 data["zones"][index]["items"] += [item_id]
+       
            # add tag in zone 2 - employee is notified
     1:     zone = 2
     1:     tag333 = RFIDTag(333)
     1:     result = warehouse.add_tag_to_zone(zone, tag333)
     1:     assert result, f"Zone {zone} does not exist"
-       
+        
            # find tag in warehouse
     1:     target_tag_id = 333
     1:     result = warehouse.find_tag_in_warehouse(target_tag_id)
@@ -83,7 +117,7 @@
     1:     print(f"Tag location: {result}\n")
        
            # add observer - send message to observer when an item was add/remove from a zone
-    1:     warehouse.add_observer_to_all_readers(employee)
+    1:     warehouse.add_observer_to_all_readers(admin)
        
            # move item from one zone to another
     1:     tag_id_to_search = 61
@@ -99,14 +133,43 @@
     1:     item = 100
     1:     result = warehouse.find_item_location(item)
     1:     assert result != -1, f"Item {item} does not exist"
-    1:     print(f"\nFind item {item}: zone {result}")
+    1:     print(f"\nFind item {item}: zone {result}","\n\n")
+       
+           # test access_control
+    1:     role_employee = Role(["add_item","remove_item"])
+    1:     employee1 = Employee(11,"Employee 11",role_employee)
+    1:     employee2 = Employee(12,"Employee 12",role_employee)
+       
+    1:     zone = Zone(99,"Zone 99")
+    1:     warehouse.add_zone(employee1,zone)
+    1:     print(employee1.role.permissions)
+       
+   13:     for zone in warehouse:
+   12:         print(f"Zone: {zone.get_zone_id()}")
        
 >>>>>> if __name__ == "__main__":
+>>>>>>     db = './database.json'
+       
+>>>>>>     try:
+>>>>>>         with open(db, 'r') as file:
+>>>>>>             data = json.load(file)
+>>>>>>     except FileNotFoundError:
+>>>>>>         data = {
+>>>>>>             "capacity": -1,
+>>>>>>             "employees": [],
+>>>>>>             "zones": [],
+>>>>>>             "items": [],
+>>>>>>             "tags": []
+               }
+       
 >>>>>>     with open("App/output.txt", 'w') as file:
 >>>>>>         file.write("Fuctions messages.\n")
        
 >>>>>>     tracer = trace.Trace(trace=False, ignoredirs=[sys.prefix, sys.exec_prefix])
 >>>>>>     tracer.run('main()')
-           
+       
 >>>>>>     r = tracer.results()
 >>>>>>     r.write_results(show_missing=True, coverdir="./tema6")
+       
+>>>>>>     with open(db, 'w') as file:
+>>>>>>         json.dump(data, file, indent=4)

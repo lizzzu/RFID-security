@@ -1388,3 +1388,32 @@ Calling function: find_item_location from Warehouse
 Calling function: get_zone_id from Zone
 Function get_zone_id from RFIDReader has been executed.
 Function find_item_location from Warehouse has been executed.
+Calling function: add_zone from Warehouse
+Permission request from employee with id 11 for permission: add_zone
+Permission granted to employee with id 11 for permission: add_zone
+Access permitted: Employee 11 has the required permission.
+Function add_zone from Warehouse has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.
+Calling function: get_zone_id from Zone
+Function get_zone_id from RFIDReader has been executed.

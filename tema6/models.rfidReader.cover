@@ -17,7 +17,7 @@
 >>>>>>     @print_function_name_before_execution("RFIDReader")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def remove_rfid_tag(self, tag_id: int):
-   12:         self.rfid_tags = [tag for tag in self.rfid_tags if tag.tag_id != tag_id]
+   11:         self.rfid_tags = [tag for tag in self.rfid_tags if tag.tag_id != tag_id]
        
 >>>>>>     def get_rfid_tags(self) -> list:
 >>>>>>         return self.rfid_tags
