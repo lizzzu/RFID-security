@@ -2,9 +2,9 @@
 >>>>>> class RFIDTag:
        
 >>>>>>     def __init__(self, tag_id: int, status="Active"):
-  111:         self.tag_id = tag_id
+  121:         self.tag_id = tag_id
                #self.location = location
-  111:         self.status = status
+  121:         self.status = status
        
 >>>>>>     def get_tag_id(self):
 >>>>>>         return self.tag_id
@@ -22,7 +22,7 @@
 >>>>>>         return f"RFIDTag(ID: {self.tag_id}, Status: {self.status})"
            
 >>>>>>     def serialize(self):
-  110:         return {
-  110:             "id": self.tag_id,
-  110:             "status": self.status
+  120:         return {
+  120:             "id": self.tag_id,
+  120:             "status": self.status
                }

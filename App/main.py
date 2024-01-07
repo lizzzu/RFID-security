@@ -1,8 +1,6 @@
 import sys
 import json
-import time
 import trace
-import threading
 
 from models.item import Item
 from models.zone import Zone
@@ -20,7 +18,16 @@ def add_to_json(data, data_key, key, value, data_to_add):
     data[data_key][index] = data_to_add
     return index
 
-def create_database():
+def update_json(data_key, key, value, data_to_add):
+    with open(db, 'r') as file:
+        data = json.load(file)
+
+    add_to_json(data, data_key, key, value, data_to_add)
+
+    with open(db, 'w') as file:
+        json.dump(data, file, indent=4)
+
+def create_database(capacity):
     global warehouse, admin
 
     try:
@@ -35,7 +42,6 @@ def create_database():
             "tags": []
         }
 
-    capacity = 230
     warehouse = Warehouse(capacity)
     data["capacity"] = capacity
 
@@ -93,21 +99,73 @@ def create_database():
     with open(db, 'w') as file:
         json.dump(data, file, indent=4)
 
-def client_function(thread_id):
-    for i in range(5):
-        time.sleep(1)
-        print(f"Thread {thread_id}: {i}")
+def add_employees(nr_of_employees):
+    global warehouse
+
+    employee_role = Role(["add_item", "remove_item", "add_zone"])
+    for i in range(nr_of_employees):
+        employee = Employee(i, f"Employee {i}", employee_role)
+        warehouse.add_employee(employee)
+        warehouse.access_control.assign_role(employee, employee_role)
+        update_json("employees", "id", i, employee.serialize())
+
+        print(f"Added employee {i}")
+
+def add_zones(nr_of_zones):
+    global warehouse, admin
+
+    with open(db, 'r') as file:
+        data = json.load(file)
+        nr_of_existing_zones = len(data["zones"])
+
+    for i in range(nr_of_zones):
+        zone_id = i + nr_of_existing_zones
+        zone = Zone(zone_id, f"Zone {zone_id}")
+        zone.add_rfid_reader(RFIDReader(zone_id, zone_id))
+        warehouse.add_zone(admin, zone)
+        update_json("zones", "id", zone_id, zone.serialize())
+
+        print(f"Added zone {zone_id}")
+
+def add_items(nr_of_items):
+    global warehouse
+
+    with open(db, 'r') as file:
+        data = json.load(file)
+        zones = data["zones"]
+        nr_of_existing_items = len(data["items"])
+
+    for index, zone in enumerate(zones):
+        for i in range(nr_of_items):
+            item_id = i + index + nr_of_existing_items
+            tag_id = item_id
+            item = Item(item_id, f"item {item_id}", tag_id)
+            tag = RFIDTag(tag_id)
+
+            result = warehouse.add_item(admin, item, tag)
+            if not result:
+                print("Warehouse is at full capacity. Cannot add more items.")
+
+            zone_id = zone["id"]
+            warehouse.add_tag_to_zone(zone_id, tag)
+
+            update_json("tags", "id", tag_id, tag.serialize())
+            update_json("items", "id", item_id, item.serialize())
+
+            with open(db, 'r') as file:
+                data = json.load(file)
+                data["zones"][index]["items"] += [item_id]
+            with open(db, 'w') as file:
+                json.dump(data, file, indent=4)
+
+def server_function(nr_of_employees, nr_of_zones, nr_of_items):
+    add_employees(nr_of_employees)
+    add_zones(nr_of_zones)
+    add_items(nr_of_items)
 
 def main():
     global warehouse, admin
-    create_database()
-    
-    nr_of_threads = 100
-    threads = []
-    for i in range(nr_of_threads):
-        thread = threading.Thread(target=client_function, args=(i,))
-        threads.append(thread)
-        thread.start()
+    create_database(10 ** 10)
 
     # add tag in zone 2 - employee is notified
     zone = 2
@@ -163,24 +221,21 @@ def main():
     assert result != -1, f"Item {item} does not exist"
     print(f"\nFind item {item}: zone {result}","\n\n")
 
-    # # test access_control
-    # role_employee = Role(["add_item","remove_item"])
-    # employee1 = Employee(11,"Employee 11",role_employee)
-    # add_to_json("employees", "id", 11, employee1.serialize())
+    # test access_control
+    role_employee = Role(["add_item","remove_item"])
+    employee1 = Employee(11,"Employee 11",role_employee)
+    update_json("employees", "id", 11, employee1.serialize())
 
-    # zone = Zone(99,"Zone 99")
-    # warehouse.add_zone(employee1,zone)
-    # add_to_json("zones", "id", 99, zone.serialize())
+    zone = Zone(99,"Zone 99")
+    warehouse.add_zone(employee1,zone)
+    update_json("zones", "id", 99, zone.serialize())
 
-    # print(employee1.role.permissions)
+    print(employee1.role.permissions)
 
-    # for zone in warehouse:
-    #     print(f"Zone: {zone.get_zone_id()}")
+    for zone in warehouse:
+        print(f"Zone: {zone.get_zone_id()}")
     
-    for thread in threads:
-        thread.join()
-    
-    print("All threads have finished.")
+    server_function(10, 10, 10)
 
 if __name__ == "__main__":
     db = './database.json'

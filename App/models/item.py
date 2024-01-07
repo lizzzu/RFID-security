@@ -35,3 +35,11 @@ class Item:
             "name": self.name,
             "tag_id": self.rfid_tag_id
         }
+    
+    @staticmethod
+    def deserialize(item):
+        return Item(
+            item["id"],
+            item["name"],
+            item["tag_id"]
+        )

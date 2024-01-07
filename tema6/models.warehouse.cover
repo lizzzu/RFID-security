@@ -68,10 +68,10 @@
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     def add_item(self, employee: Employee, item: Item, tag: RFIDTag) -> bool:
-  110:         if len(self.items) < self.capacity:
-  110:             self.items.append(item)
-  110:             self.rfid_tags.append(tag)
-  110:             return True
+  120:         if len(self.items) < self.capacity:
+  120:             self.items.append(item)
+  120:             self.rfid_tags.append(tag)
+  120:             return True
 >>>>>>         return False
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
@@ -92,7 +92,7 @@
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     @check_access_control("add_zone")
 >>>>>>     def add_zone(self, employee: Employee, zone: Zone):
-   11:         self.zones.append(zone)
+   12:         self.zones.append(zone)
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
@@ -123,11 +123,11 @@
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     def add_tag_to_zone(self, zone_id: int, tag: RFIDTag) -> bool:
-  665:         for zone in self.zones:
-  665:             if zone.id == zone_id:
-  112:                 zone_index = self.zones.index(zone)
-  112:                 self.zones[zone_index].add_rfid_tag(tag)
-  112:                 return True
+  711:         for zone in self.zones:
+  711:             if zone.id == zone_id:
+  122:                 zone_index = self.zones.index(zone)
+  122:                 self.zones[zone_index].add_rfid_tag(tag)
+  122:                 return True
 >>>>>>         return False
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
@@ -174,7 +174,7 @@
        
            # Iterator pattern
 >>>>>>     def __iter__(self):
-    1:         return iter(self.zones)
+    2:         return iter(self.zones)
        
            # Observer design
 >>>>>>     @print_function_name_before_execution("Warehouse")

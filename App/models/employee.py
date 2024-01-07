@@ -46,9 +46,15 @@ class Employee:
             "name": self.name,
             "permissions": self.role.serialize()
         }
+    
+    @staticmethod
+    def deserialize(employee):
+        return Employee(
+            employee["id"], 
+            employee["name"], 
+            Role(employee["permissions"])
+        )
 
     # Observer pattern
     def update(self, tag_id, action):
-        print(f"employee id={self.employee_id}: Tag '{tag_id}' was {action}.")
-
-    
+        print(f"Employee {self.employee_id}: Tag '{tag_id}' was {action}.")

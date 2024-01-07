@@ -26,3 +26,10 @@ class RFIDTag:
             "id": self.tag_id,
             "status": self.status
         }
+    
+    @staticmethod
+    def deserialize(tag):
+        return RFIDTag(
+            tag["id"],
+            tag["status"]
+        )

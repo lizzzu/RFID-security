@@ -7,8 +7,8 @@
        
 >>>>>> def validate_tag(func, filename="App/output.txt"):
 >>>>>>     def wrapper(self, employee, item, tag):
-  110:         if tag.tag_id > 0:
-  110:             return func(self, employee, item, tag)
+  120:         if tag.tag_id > 0:
+  120:             return func(self, employee, item, tag)
                else:
 >>>>>>             with open(filename, 'a') as file:
 >>>>>>                 file.write(f"Tag id invalid.\n")
@@ -18,9 +18,9 @@
 >>>>>> def print_function_name_before_execution(location, filename="App/output.txt"):
 >>>>>>     def decorator(func):
 >>>>>>         def wrapper(*args, **kwargs):
-  634:             with open(filename, 'a') as file:
-  634:                 file.write(f"Calling function: {func.__name__} from {location}\n")
-  634:             return func(*args, **kwargs)
+  697:             with open(filename, 'a') as file:
+  697:                 file.write(f"Calling function: {func.__name__} from {location}\n")
+  697:             return func(*args, **kwargs)
 >>>>>>         return wrapper
 >>>>>>     return decorator
        
@@ -28,10 +28,10 @@
 >>>>>>     def decorator(func):
 >>>>>>         @wraps(func)
 >>>>>>         def wrapper(*args, **kwargs):
-  634:             result = func(*args, **kwargs)
-  634:             with open(filename, 'a') as file:
-  634:                 file.write(f"Function {func.__name__} from {location} has been executed.\n")
-  634:             return result
+  697:             result = func(*args, **kwargs)
+  697:             with open(filename, 'a') as file:
+  697:                 file.write(f"Function {func.__name__} from {location} has been executed.\n")
+  697:             return result
 >>>>>>         return wrapper
 >>>>>>     return decorator
        

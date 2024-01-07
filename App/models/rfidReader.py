@@ -1,6 +1,6 @@
 from models.rfidTag import RFIDTag
-
 from monitors import print_function_name_before_execution, print_function_name_after_execution
+
 class RFIDReader:
 
     def __init__(self, reader_id: int, zone_id: int):

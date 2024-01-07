@@ -81,3 +81,10 @@ class Zone:
             "name": self.name,
             "items": []
         }
+
+    @staticmethod
+    def deserialize(zone):
+        return Zone(
+            zone["id"],
+            zone["name"]
+        )

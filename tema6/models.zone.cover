@@ -5,9 +5,9 @@
 >>>>>> class Zone:
        
 >>>>>>     def __init__(self, id: int, name: str):
-   11:         self.name = name
-   11:         self.id = id
-   11:         self.observers = []
+   12:         self.name = name
+   12:         self.id = id
+   12:         self.observers = []
                #self.capacity = capacity
                #self.rfid_reader = RFIDReader
        
@@ -19,8 +19,8 @@
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def add_rfid_tag(self, tag: RFIDTag):
-  112:         self.rfid_reader.add_rfid_tag(tag)
-  112:         self.notify_observers(tag.tag_id, f"added in zone with id = {self.id}")
+  122:         self.rfid_reader.add_rfid_tag(tag)
+  122:         self.notify_observers(tag.tag_id, f"added in zone with id = {self.id}")
        
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
@@ -49,7 +49,7 @@
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def get_zone_id(self):
-   13:         return self.id
+   25:         return self.id
        
 >>>>>>     def __str__(self):
 >>>>>>         return f"name = {self.name}\nid = {self.id}"
@@ -72,12 +72,12 @@
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def notify_observers(self, tag_id, action):
-  115:         for observer in self.observers:
-    2:             observer.update(tag_id, action)
+  135:         for observer in self.observers:
+   12:             observer.update(tag_id, action)
        
 >>>>>>     def serialize(self):
-   11:         return {
-   11:             "id": self.id,
-   11:             "name": self.name,
-   11:             "items": []
+   12:         return {
+   12:             "id": self.id,
+   12:             "name": self.name,
+   12:             "items": []
                }
