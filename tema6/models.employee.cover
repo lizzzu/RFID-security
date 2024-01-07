@@ -7,10 +7,10 @@
        
 >>>>>> class Role:
 >>>>>>     def __init__(self, permissions=[]):
-    3:         self.permissions = permissions
+    2:         self.permissions = permissions
        
 >>>>>>     def add_permission(self, permission):
-    1:         self.permissions.append(permission)
+>>>>>>         self.permissions.append(permission)
        
 >>>>>>     def check_permission(self, required_permission):
 >>>>>>         return required_permission in self.permissions
@@ -21,9 +21,9 @@
 >>>>>> class Employee:
        
 >>>>>>     def __init__(self, employee_id: int, name: str, role: Role):
-    4:         self.employee_id = employee_id
-    4:         self.name = name
-    4:         self.role = role
+    2:         self.employee_id = employee_id
+    2:         self.name = name
+    2:         self.role = role
        
 >>>>>>     def get_employee_id(self):
 >>>>>>         return self.employee_id

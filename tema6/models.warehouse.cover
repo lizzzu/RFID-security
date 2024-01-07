@@ -41,7 +41,7 @@
     2:         try:
     9:             for zone in self.zones:
     9:                 if zone.id == zone_id:
-   22:                     elements = [tag.tag_id for tag in zone.rfid_reader.rfid_tags]
+   24:                     elements = [tag.tag_id for tag in zone.rfid_reader.rfid_tags]
     2:                     return elements
 >>>>>>             return []
 >>>>>>         except:
@@ -92,7 +92,7 @@
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     @check_access_control("add_zone")
 >>>>>>     def add_zone(self, employee: Employee, zone: Zone):
-   12:         self.zones.append(zone)
+   11:         self.zones.append(zone)
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
@@ -174,7 +174,7 @@
        
            # Iterator pattern
 >>>>>>     def __iter__(self):
-    2:         return iter(self.zones)
+    1:         return iter(self.zones)
        
            # Observer design
 >>>>>>     @print_function_name_before_execution("Warehouse")
