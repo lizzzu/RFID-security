@@ -42,7 +42,7 @@ def client_function(thread_id):
 
     for _ in range(10):
         # find tag in warehouse
-        target_tag_id = random.randrange(0, 200)
+        target_tag_id = random.randrange(0, 300)
         result = warehouse.find_tag_in_warehouse(target_tag_id)
         if not result:
             print(f"[{thread_id}] Tag {target_tag_id} does not exist")
@@ -50,7 +50,7 @@ def client_function(thread_id):
             print(f"[{thread_id}] Tag {target_tag_id} found")
     
         # find item in warehouse
-        id_to_search = random.randrange(0, 200)
+        id_to_search = random.randrange(0, 300)
         result = warehouse.find_item_location(id_to_search)
         if result == -1:
             print(f"[{thread_id}] Tag {id_to_search} does not exist")
@@ -58,7 +58,7 @@ def client_function(thread_id):
             print(f"[{thread_id}] Tag location: {result}")
 
         # get item info
-        id = random.randrange(0, 200)
+        id = random.randrange(0, 300)
         result = warehouse.get_item_info_by_id(id)
         if not result:
             print(f"[{thread_id}] Item {id} does not exist")
@@ -66,7 +66,7 @@ def client_function(thread_id):
             print(f"[{thread_id}] Item info: {result}")
     
         # get item location(zone id)
-        id = random.randrange(0, 200)
+        id = random.randrange(0, 300)
         result = warehouse.find_zone_location_of_item(id)
         if result == -1:
             print(f"[{thread_id}] Item {id} does not exist")

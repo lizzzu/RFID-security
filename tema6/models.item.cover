@@ -2,10 +2,10 @@
 >>>>>> class Item:
        
 >>>>>>     def __init__(self, item_id: int, name: str, rfid_tag_id: int):
-  120:         self.item_id = item_id
-  120:         self.rfid_tag_id = rfid_tag_id
+  330:         self.item_id = item_id
+  330:         self.rfid_tag_id = rfid_tag_id
                #self.zone_id = 0
-  120:         self.name = name
+  330:         self.name = name
        
 >>>>>>     def get_item_details(self):
 >>>>>>         details = {
@@ -30,8 +30,16 @@
     1:         return f"Item ID: {self.item_id}, Name: {self.name} RFID Tag ID: {self.rfid_tag_id}"
        
 >>>>>>     def serialize(self):
-  120:         return {
-  120:             "id": self.item_id,
-  120:             "name": self.name,
-  120:             "tag_id": self.rfid_tag_id
+  330:         return {
+  330:             "id": self.item_id,
+  330:             "name": self.name,
+  330:             "tag_id": self.rfid_tag_id
                }
+           
+>>>>>>     @staticmethod
+>>>>>>     def deserialize(item):
+>>>>>>         return Item(
+>>>>>>             item["id"],
+>>>>>>             item["name"],
+>>>>>>             item["tag_id"]
+               )

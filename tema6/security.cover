@@ -22,12 +22,12 @@
     1:         self.admin = Admin()
        
 >>>>>>     def assign_role(self, employee, role):
-    2:         self.employee_roles[employee.employee_id] = role
+   12:         self.employee_roles[employee.employee_id] = role
        
 >>>>>>     def check_access(self, employee, required_permission):
-  132:         employee_role = employee.role.permissions 
-  132:         if required_permission in employee_role:
-  131:             return True
+  352:         employee_role = employee.role.permissions 
+  352:         if required_permission in employee_role:
+  351:             return True
                else:
     1:             self.request_permission(employee, required_permission)
     1:             return required_permission in employee_role
@@ -47,11 +47,11 @@
 >>>>>>     def decorator(func):
 >>>>>>         @wraps(func)
 >>>>>>         def wrapper(self, *args, **kwargs):
-  132:             employee = args[0]  # Assuming the first argument is an Employee instance
-  132:             if self.access_control.check_access(employee, permission):
-  132:                 with open(filename, 'a') as file:
-  132:                     file.write(f"Access permitted: Employee {employee.employee_id} has the required permission.\n")
-  132:                 return func(self, *args, **kwargs)
+  352:             employee = args[0]  # Assuming the first argument is an Employee instance
+  352:             if self.access_control.check_access(employee, permission):
+  352:                 with open(filename, 'a') as file:
+  352:                     file.write(f"Access permitted: Employee {employee.employee_id} has the required permission.\n")
+  352:                 return func(self, *args, **kwargs)
                    else:
 >>>>>>                 with open(filename, 'a') as file:
 >>>>>>                     file.write(f"Access denied: Employee {employee.employee_id} does not have the required permission.\n")

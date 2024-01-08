@@ -1,8 +1,6 @@
 >>>>>> import sys
 >>>>>> import json
 >>>>>> import trace
->>>>>> import random
->>>>>> import threading
        
 >>>>>> from models.item import Item
 >>>>>> from models.zone import Zone
@@ -12,37 +10,36 @@
 >>>>>> from models.warehouse import Warehouse
        
 >>>>>> def add_to_json(data, data_key, key, value, data_to_add):
-15219:     index, _ = next(((i, d) for i, d in enumerate(data[data_key]) if d.get(key) == value), (None, None))
-  255:     if index is None:
-   18:         data[data_key] += [data_to_add]
-   18:         return len(data[data_key]) - 1
+110269:     index, _ = next(((i, d) for i, d in enumerate(data[data_key]) if d.get(key) == value), (None, None))
+  695:     if index is None:
+  695:         data[data_key] += [data_to_add]
+  695:         return len(data[data_key]) - 1
        
-  237:     data[data_key][index] = data_to_add
-  237:     return index
+>>>>>>     data[data_key][index] = data_to_add
+>>>>>>     return index
        
 >>>>>> def update_json(data_key, key, value, data_to_add):
-   22:     with open(db, 'r') as file:
-   22:         data = json.load(file)
+  462:     with open(db, 'r') as file:
+  462:         data = json.load(file)
        
-   22:     add_to_json(data, data_key, key, value, data_to_add)
+  462:     add_to_json(data, data_key, key, value, data_to_add)
        
-   22:     with json_lock:
-   22:         with open(db, 'w') as file:
-   22:             json.dump(data, file, indent=4)
+  462:     with open(db, 'w') as file:
+  462:         json.dump(data, file, indent=4)
        
 >>>>>> def create_database(capacity):
            global warehouse, admin
        
     1:     try:
     1:         with open(db, 'r') as file:
-    1:             data = json.load(file)
->>>>>>     except FileNotFoundError:
->>>>>>         data = {
->>>>>>             "capacity": -1,
->>>>>>             "employees": [],
->>>>>>             "zones": [],
->>>>>>             "items": [],
->>>>>>             "tags": []
+>>>>>>             data = json.load(file)
+    1:     except FileNotFoundError:
+    1:         data = {
+    1:             "capacity": -1,
+    1:             "employees": [],
+    1:             "zones": [],
+    1:             "items": [],
+    1:             "tags": []
                }
        
     1:     warehouse = Warehouse(capacity)
@@ -105,77 +102,66 @@
 >>>>>> def add_employees(nr_of_employees):
            global warehouse
        
->>>>>>     employee_role = Role(["add_item","remove_item"])
->>>>>>     for i in range(nr_of_employees):
->>>>>>         employee = Employee(i, f"Employee {i}", employee_role)
->>>>>>         warehouse.add_employee(employee)
->>>>>>         warehouse.access_control.assign_role(employee, employee_role)
->>>>>>         update_json("employees", "id", i, employee.serialize())
+    1:     employee_role = Role(["add_item", "remove_item", "add_zone"])
+   11:     for i in range(nr_of_employees):
+   10:         employee = Employee(i, f"Employee {i}", employee_role)
+   10:         warehouse.add_employee(employee)
+   10:         warehouse.access_control.assign_role(employee, employee_role)
+   10:         update_json("employees", "id", i, employee.serialize())
        
->>>>>>         print(f"Added employee {i}")
+   10:         print(f"Added employee {i}")
        
 >>>>>> def add_zones(nr_of_zones):
            global warehouse, admin
        
->>>>>>     for i in range(nr_of_zones):
->>>>>>         zone = Zone(i, f"Zone {i}")
->>>>>>         zone.add_rfid_reader(RFIDReader(i, i))
->>>>>>         warehouse.add_zone(admin, zone)
->>>>>>         update_json("zones", "id", i, zone.serialize())
+    1:     with open(db, 'r') as file:
+    1:         data = json.load(file)
+    1:         nr_of_existing_zones = len(data["zones"])
        
->>>>>>         print(f"Added zone {i}")
+   11:     for i in range(nr_of_zones):
+   10:         zone_id = i + nr_of_existing_zones
+   10:         zone = Zone(zone_id, f"Zone {zone_id}")
+   10:         zone.add_rfid_reader(RFIDReader(zone_id, zone_id))
+   10:         warehouse.add_zone(admin, zone)
+   10:         update_json("zones", "id", zone_id, zone.serialize())
+       
+   10:         print(f"Added zone {zone_id}")
        
 >>>>>> def add_items(nr_of_items):
            global warehouse
        
     1:     with open(db, 'r') as file:
     1:         data = json.load(file)
-    1:         nr_of_existing_items = len(data["items"])
-    1:     print(f"existing items: {nr_of_existing_items}")
+    1:         zones = data["zones"]
+    1:         last_item_id = data["items"][-1]["id"]
        
-   11:     for i in range(nr_of_items):
-   10:         item_id = i + nr_of_existing_items
-   10:         tag_id = item_id
-   10:         item = Item(item_id, f"item {item_id}", tag_id)
-   10:         tag = RFIDTag(tag_id)
+   23:     for index, zone in enumerate(zones):
+  242:         for i in range(nr_of_items):
+  220:             last_item_id += 1
+  220:             item_id = last_item_id
+  220:             tag_id = item_id
+  220:             item = Item(item_id, f"item {item_id}", tag_id)
+  220:             tag = RFIDTag(tag_id)
        
-   10:         result = warehouse.add_item(admin, item, tag)
-   10:         if not result:
->>>>>>             print("Warehouse is at full capacity. Cannot add more items.")
+  220:             result = warehouse.add_item(admin, item, tag)
+  220:             if not result:
+>>>>>>                 print("Warehouse is at full capacity. Cannot add more items.")
        
-   10:         with open(db, 'r') as file:
-   10:             data = json.load(file)
-   10:             index = random.randrange(0, len(data["zones"]))
-   10:             zone_id = data["zones"][index]["id"]
-   10:         warehouse.add_tag_to_zone(zone_id, tag)
+  220:             zone_id = zone["id"]
+  220:             warehouse.add_tag_to_zone(zone_id, tag)
        
-   10:         update_json("tags", "id", tag_id, tag.serialize())
-   10:         update_json("items", "id", item_id, item.serialize())
+  220:             update_json("tags", "id", tag_id, tag.serialize())
+  220:             update_json("items", "id", item_id, item.serialize())
        
-   10:         with json_lock:
-   10:             with open(db, 'r+') as file:
-   10:                 data = json.load(file)
-           #             if item_id not in data["zones"][index]["items"]:
-           #                 data["zones"][index]["items"] += [item_id]
-           #             json.dump(data, file, indent=4)
-       
-   10:         print(f"Added item {item_id} in zone {zone_id}")
+  220:             with open(db, 'r') as file:
+  220:                 data = json.load(file)
+  220:                 data["zones"][index]["items"] += [item_id]
+  220:             with open(db, 'w') as file:
+  220:                 json.dump(data, file, indent=4)
        
 >>>>>> def server_function(nr_of_employees, nr_of_zones, nr_of_items):
-           # thread_employees = threading.Thread(target=add_employees, args=(nr_of_employees,))
-           # thread_zones = threading.Thread(target=add_zones, args=(nr_of_zones,))
-           # thread_items = threading.Thread(target=add_items, args=(nr_of_items,))
-       
-           # thread_employees.start()
-           # thread_zones.start()
-           # thread_items.start()
-           
-           # thread_employees.join()
-           # thread_zones.join()
-           # thread_items.join()
-       
-           # add_employees(nr_of_employees)
-           # add_zones(nr_of_zones)
+    1:     add_employees(nr_of_employees)
+    1:     add_zones(nr_of_zones)
     1:     add_items(nr_of_items)
        
 >>>>>> def main():
@@ -254,7 +240,6 @@
        
 >>>>>> if __name__ == "__main__":
 >>>>>>     db = './database.json'
->>>>>>     json_lock = threading.Lock()
        
 >>>>>>     with open("App/output.txt", 'w') as file:
 >>>>>>         file.write("Fuctions messages.\n")

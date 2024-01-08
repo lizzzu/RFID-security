@@ -68,10 +68,10 @@
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     def add_item(self, employee: Employee, item: Item, tag: RFIDTag) -> bool:
-  120:         if len(self.items) < self.capacity:
-  120:             self.items.append(item)
-  120:             self.rfid_tags.append(tag)
-  120:             return True
+  330:         if len(self.items) < self.capacity:
+  330:             self.items.append(item)
+  330:             self.rfid_tags.append(tag)
+  330:             return True
 >>>>>>         return False
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
@@ -92,7 +92,7 @@
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     @check_access_control("add_zone")
 >>>>>>     def add_zone(self, employee: Employee, zone: Zone):
-   12:         self.zones.append(zone)
+   22:         self.zones.append(zone)
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
@@ -108,7 +108,7 @@
 >>>>>>     @print_function_name_after_execution("Warehouse")
            #@check_access_control("add_employee")
 >>>>>>     def add_employee(self, employee: Employee):
-    2:         self.employee.append(employee)
+   12:         self.employee.append(employee)
        
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
@@ -123,11 +123,11 @@
 >>>>>>     @print_function_name_before_execution("Warehouse")
 >>>>>>     @print_function_name_after_execution("Warehouse")
 >>>>>>     def add_tag_to_zone(self, zone_id: int, tag: RFIDTag) -> bool:
-  711:         for zone in self.zones:
-  711:             if zone.id == zone_id:
-  122:                 zone_index = self.zones.index(zone)
-  122:                 self.zones[zone_index].add_rfid_tag(tag)
-  122:                 return True
+ 3195:         for zone in self.zones:
+ 3195:             if zone.id == zone_id:
+  332:                 zone_index = self.zones.index(zone)
+  332:                 self.zones[zone_index].add_rfid_tag(tag)
+  332:                 return True
 >>>>>>         return False
        
 >>>>>>     @print_function_name_before_execution("Warehouse")

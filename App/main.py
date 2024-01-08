@@ -133,11 +133,12 @@ def add_items(nr_of_items):
     with open(db, 'r') as file:
         data = json.load(file)
         zones = data["zones"]
-        nr_of_existing_items = len(data["items"])
+        last_item_id = data["items"][-1]["id"]
 
     for index, zone in enumerate(zones):
         for i in range(nr_of_items):
-            item_id = i + index + nr_of_existing_items
+            last_item_id += 1
+            item_id = last_item_id
             tag_id = item_id
             item = Item(item_id, f"item {item_id}", tag_id)
             tag = RFIDTag(tag_id)

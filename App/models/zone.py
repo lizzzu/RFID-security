@@ -9,7 +9,7 @@ class Zone:
         self.id = id
         self.observers = []
         #self.capacity = capacity
-        #self.rfid_reader = RFIDReader
+        self.rfid_reader = RFIDReader(id, id)
 
     @print_function_name_before_execution("Zone")
     @print_function_name_after_execution("RFIDReader")

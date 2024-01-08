@@ -5,22 +5,22 @@
 >>>>>> class Zone:
        
 >>>>>>     def __init__(self, id: int, name: str):
-   12:         self.name = name
-   12:         self.id = id
-   12:         self.observers = []
+   22:         self.name = name
+   22:         self.id = id
+   22:         self.observers = []
                #self.capacity = capacity
-               #self.rfid_reader = RFIDReader
+   22:         self.rfid_reader = RFIDReader(id, id)
        
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def add_rfid_reader(self, reader: RFIDReader):
-   11:         self.rfid_reader = reader
+   21:         self.rfid_reader = reader
        
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def add_rfid_tag(self, tag: RFIDTag):
-  122:         self.rfid_reader.add_rfid_tag(tag)
-  122:         self.notify_observers(tag.tag_id, f"added in zone with id = {self.id}")
+  332:         self.rfid_reader.add_rfid_tag(tag)
+  332:         self.notify_observers(tag.tag_id, f"added in zone with id = {self.id}")
        
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
@@ -72,12 +72,19 @@
 >>>>>>     @print_function_name_before_execution("Zone")
 >>>>>>     @print_function_name_after_execution("RFIDReader")
 >>>>>>     def notify_observers(self, tag_id, action):
-  135:         for observer in self.observers:
-   12:             observer.update(tag_id, action)
+  445:         for observer in self.observers:
+  112:             observer.update(tag_id, action)
        
 >>>>>>     def serialize(self):
-   12:         return {
-   12:             "id": self.id,
-   12:             "name": self.name,
-   12:             "items": []
+   22:         return {
+   22:             "id": self.id,
+   22:             "name": self.name,
+   22:             "items": []
                }
+       
+>>>>>>     @staticmethod
+>>>>>>     def deserialize(zone):
+>>>>>>         return Zone(
+>>>>>>             zone["id"],
+>>>>>>             zone["name"]
+               )
